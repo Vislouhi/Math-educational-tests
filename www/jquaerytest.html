@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+	<head runat="server">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="/width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+		<script src="jquery-2.2.4.js"></script>
+		<script src="jquery.mobile-1.4.5.min.js"></script>
+	
+	<style> .output {} </style>
+	
+	
+	</head>
+	<body>
+	<script type="text/javascript">
+	function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+      }
+	  function get4randoms(min,max,tap,ta)
+	  {
+		var randoms = [3];
+		
+		randoms[tap]=ta;
+		
+		if (tap!=0)
+		do{
+		randoms[0]=getRandomInt(min, max);
+		}while(randoms[0]==randoms[tap]);
+		
+		
+		if (tap!=1) do
+		{
+			randoms[1]=getRandomInt(min, max);
+		}while((randoms[0]==randoms[1])||(randoms[1]==randoms[tap]));
+	    if (tap!=2) do
+		{
+			randoms[2]=getRandomInt(min, max);
+		}while((randoms[0]==randoms[2])||(randoms[1]==randoms[2])||(randoms[tap]==randoms[2]));
+		
+		if (tap!=3)do
+		{
+			randoms[3]=getRandomInt(min, max);
+		}while((randoms[0]==randoms[3])||(randoms[1]==randoms[3])||(randoms[2]==randoms[3]));
+		return randoms;
+	  }
+	  
+	  
+	  function genQuestString(val){
+	  
+		
+	  for (var i = 0; i < val; i++) {
+  
+		document.write("| &nbsp &nbsp");
+		}
+	  
+	  }
+   </script>	
+	
+	
+	
+	<div data-role="header" data-position="inline" data-theme="b"> 
+	<h1>MathTest</h1>
+	<a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
+	<a id="back" href="loginform.html" data-icon="back" class="ui-btn-left">Назад</a>
+</div>
+	<script type="text/javascript">
+		var randomAnswers = [3];
+var trueAns;
+var trueAnsPos;
+trueAnsPos=getRandomInt(0, 3);
+		
+		randomQuest = getRandomInt(1, 10);
+		trueAns=randomQuest;
+		
+		
+		randomAnswers = get4randoms(1,10,trueAnsPos,trueAns);
+		var randomQuest;
+		
+		
+						
+	</script>
+	<div data-role="content" data-theme="b">
+	
+	<h1 id="zag" align="center"> Задание 1 </h1>
+	<p align="center"> Сколько палочек? </p>
+	<p align="center"> 
+
+<script type="text/javascript">
+						
+						genQuestString(randomQuest);
+						
+					</script>
+
+	</p>
+
+	
+	
+	
+	
+	
+	</div>
+		
+	
+		
+		
+		
+		<div data-role="fieldcontain" >
+		
+		    <fieldset data-role="controlgroup" >
+		    	<legend></legend>
+		         	<input type="radio" name="radio-pet-1" id="radio-ans-1" value="choice-0" checked="checked"  />
+		         	<label id="ans0" for="radio-ans-1">
+					
+					<script type="text/javascript">
+						
+						document.write( ""+ randomAnswers[0]);
+						
+					</script>
+					
+					
+					
+					</label>
+
+		         	<input type="radio" name="radio-pet-1" id="radio-ans-2" value="choice-1"  />
+		         	<label id="ans1" for="radio-ans-2">
+					<script type="text/javascript">
+						
+						document.write( ""+ randomAnswers[1]);
+						
+					</script>
+					</label>
+
+		         	<input type="radio" name="radio-pet-1" id="radio-ans-3" value="choice-2"  />
+		         	<label id="ans2" for="radio-ans-3">
+					<script type="text/javascript">
+						
+						document.write( ""+ randomAnswers[2]);
+						
+					</script>
+					
+					
+					</label>
+
+		         	<input type="radio" name="radio-pet-1" id="radio-ans-4" value="choice-3"  />
+		         	<label id="ans3" for="radio-ans-4">
+					<script type="text/javascript">
+						
+						document.write( ""+ randomAnswers[3]);
+						
+					</script>
+					</label>
+		    
+			</fieldset>
+			
+		</div>
+		
+		
+		<a id="chk" class="output" data-role="button" data-icon="check">Проверка</a>
+		<a id="next" class="output" data-role="button" data-icon="arrow-r">Далее</a>
+		
+		<script type="text/javascript">
+						
+						
+						//if(document.getElementsByName('q').checked == true)
+
+  $( "#back" ).click(function() {
+  document.location.href = "index.html";
+});
+  
+  
+  $( "#chk" ).click(function() {
+  var ras;
+   ras=""+trueAnsPos;
+  
+ // $( "#zag" ).text( ""+ Number($( "input:checked" ).val().charAt(7))+"sdf"+ras.charCodeAt(0)+"sdfsd"+trueAnsPos);
+  
+   
+   if ($( "input:checked" ).val().charCodeAt(7)==ras.charCodeAt(0)){$( "#ans"+trueAnsPos ).text( ""+ randomAnswers[trueAnsPos]+" - Верно");}
+   else
+   {$( "#ans"+trueAnsPos ).text( ""+ randomAnswers[trueAnsPos]+" - Верно");
+	$( "#ans"+Number($( "input:checked" ).val().charAt(7)) ).text( ""+ randomAnswers[Number($( "input:checked" ).val().charAt(7))]+" - Не верно");
+   }
+
+});
+
+$( "#next" ).click(function() {
+
+location.reload();
+});						
+						
+					</script>
+	
+	</body>
+</html>

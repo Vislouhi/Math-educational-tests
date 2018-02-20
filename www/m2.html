@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+	<head runat="server">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="/width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+		<script src="jquery-2.2.4.js"></script>
+		<script src="jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/code.js"></script>
+	
+	<style> .output {} 
+	.fig {
+ position: relative;
+    left: 10%; /* Выравнивание по центру */ 
+	width: 80%;
+   } 
+
+	
+	
+	</style>
+	<script type="text/javascript">
+	var iter;
+	</script>
+	
+	</head>
+	<body onload="loadPage()">
+	<script type="text/javascript">
+	
+	
+	
+	function loadPage() {
+    
+	
+	
+	
+	iter=parseInt(location.search.split('?')[1].split('&')[0]);
+	ok=parseInt(location.search.split('?')[1].split('&')[1]);
+	
+	
+	if (iter!=0) {$( "#progressbar" ).val(ok/iter*100);}
+	
+   }
+	
+	
+	
+	
+   </script>	
+	
+	
+	
+	<div data-role="header" data-position="inline" data-theme="b"> 
+	<h1>MathTest</h1>
+	<a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
+	<a id="back" href="loginform.html" data-icon="back" class="ui-btn-left">Назад</a>
+</div>
+	<script type="text/javascript">
+		
+		var iter;
+		var ok;
+		var cheked=false;
+		
+		var randomAnswers = [3];
+
+		var valA=getRandomInt(5, 30);
+		var valB=getRandomInt(1, valA);
+		
+		
+		var trueAns;
+var trueAnsPos;
+trueAnsPos=getRandomInt(0, 3);
+		
+		//randomQuest = getRandomInt(1, 10);
+		trueAns=valA-valB;
+		
+		
+		randomAnswers = get4randoms(1,30,trueAnsPos,trueAns);
+		var randomQuest;
+		
+		
+						
+	</script>
+	<div data-role="content" data-theme="b">
+	
+	<h1 id="zag" align="center"> Задание 1 </h1>
+	<p align="center"> На сколько
+<script type="text/javascript">
+						
+						document.write( ""+ valA);
+						
+					</script>
+					больше
+					
+					<script type="text/javascript">
+						
+						document.write( ""+ valB);
+						
+					</script>
+	</p>
+	
+
+	
+	
+	
+	
+	
+	</div>
+		
+	
+		
+		
+		
+		<div data-role="fieldcontain" >
+		
+		    <fieldset data-role="controlgroup" >
+		    	<legend></legend>
+		         	<input type="radio" name="radio-pet-1" id="radio-ans-1" value="choice-0" checked="checked"  />
+		         	<label id="ans0" for="radio-ans-1">
+					
+					<script type="text/javascript">
+						
+						document.write( ""+ randomAnswers[0]);
+						
+					</script>
+					
+					
+					
+					</label>
+
+		         	<input type="radio" name="radio-pet-1" id="radio-ans-2" value="choice-1"  />
+		         	<label id="ans1" for="radio-ans-2">
+					<script type="text/javascript">
+						
+						document.write( ""+ randomAnswers[1]);
+						
+					</script>
+					</label>
+
+		         	<input type="radio" name="radio-pet-1" id="radio-ans-3" value="choice-2"  />
+		         	<label id="ans2" for="radio-ans-3">
+					<script type="text/javascript">
+						
+						document.write( ""+ randomAnswers[2]);
+						
+					</script>
+					
+					
+					</label>
+
+		         	<input type="radio" name="radio-pet-1" id="radio-ans-4" value="choice-3"  />
+		         	<label id="ans3" for="radio-ans-4">
+					<script type="text/javascript">
+						
+						document.write( ""+ randomAnswers[3]);
+						
+					</script>
+					</label>
+		    
+			</fieldset>
+			
+		</div>
+		
+		
+		<a id="chk" class="output" data-role="button" data-icon="check">Проверка</a>
+		<a id="next" class="output" data-role="button" data-icon="arrow-r">Далее</a>
+		
+		<progress class="fig" id="progressbar" value="0" max="100"></progress>
+
+		
+		
+		<script type="text/javascript">
+						
+						
+						//if(document.getElementsByName('q').checked == true)
+
+//$( "#progressbar" ).val('10'+iter) ;
+
+ $( "#back" ).click(function() {
+  document.location.href = "index.html";
+});
+  
+  
+  $( "#chk" ).click(function() {
+  var ras;
+   ras=""+trueAnsPos;
+  
+  
+ // $( "#zag" ).text( ""+ Number($( "input:checked" ).val().charAt(7))+"sdf"+ras.charCodeAt(0)+"sdfsd"+trueAnsPos);
+   if (!cheked){
+   
+   if ($( "input:checked" ).val().charCodeAt(7)==ras.charCodeAt(0)){$( "#ans"+trueAnsPos ).text( ""+ randomAnswers[trueAnsPos]+" - Верно");ok++;}
+   else
+   {$( "#ans"+trueAnsPos ).text( ""+ randomAnswers[trueAnsPos]+" - Верно");
+	$( "#ans"+Number($( "input:checked" ).val().charAt(7)) ).text( ""+ randomAnswers[Number($( "input:checked" ).val().charAt(7))]+" - Не верно");
+   }
+   }
+ cheked=true;
+});
+
+$( "#next" ).click(function() {
+iter+=1;
+if (cheked==true){
+document.location.href = "m2.html?"+iter+"&"+ok;
+}
+});						
+						
+					</script>
+	
+	</body>
+</html>
