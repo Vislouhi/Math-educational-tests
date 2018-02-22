@@ -58,7 +58,12 @@ http://bootstrap-4.ru/docs/4.0/examples/
 <p>cretateTask.php?Head=Задача1|Text1=У васи было ...</p>
 <p>readTask.php?Head=Задача1</p>
 <p>Вывод в виде строки:1(успешное чтение)|id|Head|Text1|Text2|Text3|Par1|Par2|Par3|.</p>
-<p>deleteTask.php?id=5</p>
+<p>deleteTask.php?head=Цифры</p>
+<p>addTaskTree.php?par=2&head=Цифры&head1=Новая задача</p>
+<p>addTaskTree.php?par=1&head=Новый заголовок</p>
+<p>createTable1.php</p>
+<p>createTable2.php</p>
+<p>createTable3.php</p>
 
 
 <h2>Компиляция программы и тестирование</h2>
