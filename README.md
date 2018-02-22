@@ -42,8 +42,18 @@ http://bootstrap-4.ru/docs/4.0/examples/
 <p>|id(int)|Name(string)|Email(string)|Password(string)|empt1|empt2|empt3|empt4|empt5|t1(int)|t2(int)|t3(int)|t4(int)|...t20(int)|</p>
 <p>|id(int)|Head(string)|Text1(string)|Text2(string)|Text3(string)|Par1(int)|Par2(int)|Par3(int)|</p>
 <p>Создать php файлы обрабатывающие следующие запросы:</p>
-<p>authUser.php?name=ivan&pass=123456</p>
+<p>authUser.php?email=ivan@ivan.com&pass=123456</p>
 <p>Вывод в виде строки: 1(успешная авторизация)|id|Name|Email|empt1|empt2|empt3|empt4|empt5|t1(int)|t2(int)|t3(int)|t4(int)|...t20(int)|</p>
+<p>createUser.php?name=ivan&email=ivan@ivan.com&pass=123456&empt1=0&empt2=0&...</p>
+<p>Вывод в виде строки:1(успешная регистрация).</p>
+<p>deleteUser.php?email=ivan@ivan.com</p>
+<p>Вывод в виде строки:1(успешное удаление).</p>
+<p>changeUserPar.php?parName=t4&val=25</p>
+<p>Вывод в виде строки:1(успешное изменение).</p>
+<p>cretateTask.php?Head=Задача1|Text1=У васи было ...</p>
+<p>readTask.php?Head=Задача1</p>
+<p>Вывод в виде строки:1(успешное чтение)|id|Head|Text1|Text2|Text3|Par1|Par2|Par3|.</p>
+<p>deleteTask.php?id=5</p>
 
 
 <h2>Компиляция программы и тестирование</h2>
