@@ -80,6 +80,9 @@ http://bootstrap-4.ru/docs/4.0/examples/
 <p>Протестировать программу на эмуляторе Nox.</p>
 <p>Подключать к программе обновления и проводить их тестирование, исправлять ошибки.</p>
 <p>Оптимизировать код.</p>
+https://github.com/phonegap/phonegap-template-hello-world.git
+Отметить галочками Enable debug  и Enable Hydration.
+
 
 <h2>Содержание тестов</h2>
 <p>Создание строк для генерации рандомных тестов.</p>
