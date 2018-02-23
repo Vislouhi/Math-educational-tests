@@ -41,7 +41,7 @@ http://bootstrap-4.ru/docs/4.0/examples/
 <p>Структура таблиц:</p>
 <p>|id(int)|Name(string)|Email(string)|Password(string)|empt1|empt2|empt3|empt4|empt5|t1(int)|t2(int)|t3(int)|t4(int)|...t20(int)|</p>
 <p>|id(int)|Head(string)|Text1(string)|Text2(string)|Text3(string)|Par1(int)|Par2(int)|Par3(int)|</p>
-<p>|Par(int)|Head(string)|</p>
+<p>|Par(int)|Head(string)|picName(string)|</p>
 <p>Par(int) -  если 1 то это каталог, если 2 то задача. 
   Head(string) - название каталога или задачи.
 </p>
