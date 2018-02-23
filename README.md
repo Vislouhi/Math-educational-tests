@@ -55,6 +55,10 @@ http://bootstrap-4.ru/docs/4.0/examples/
 <p>Вывод в виде строки:1(успешное удаление).</p>
 <p>changeUserPar.php?parName=t4&val=25</p>
 <p>Вывод в виде строки:1(успешное изменение).</p>
+<p>listUser.php</p>
+<p>Вывод в виде строки:n(кол-во пользователей)|email1|email2|...|.</p>
+<p>listTask.php</p>
+<p>Вывод в виде строки:n(кол-во пользователей)|par1|head1|...|.</p>
 <p>cretateTask.php?Head=Задача1|Text1=У васи было ...</p>
 <p>readTask.php?Head=Задача1</p>
 <p>Вывод в виде строки:1(успешное чтение)|id|Head|Text1|Text2|Text3|Par1|Par2|Par3|.</p>
