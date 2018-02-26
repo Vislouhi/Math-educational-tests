@@ -158,21 +158,37 @@ src="www/res/icon/android/drawable-ldpi-icon.png"               density="ldpi"
 src="www/res/icon/android/drawable-mdpi-icon.png"               density="mdpi"
 
 src="www/res/icon/android/drawable-hdpi-icon.png"               density="hdpi"
+
 src="www/res/icon/android/drawable-xhdpi-icon.png"              density="xhdpi"
+
 src="www/res/icon/android/drawable-xxhdpi-icon.png"             density="xxhdpi"
+
 src="www/res/icon/android/drawable-xxxhdpi-icon.png"            density="xxxhdpi"
+
 src="www/res/screen/android/drawable-land-ldpi-screen.png"      density="land-ldpi"
+
 src="www/res/screen/android/drawable-land-mdpi-screen.png"      density="land-mdpi"
+
 src="www/res/screen/android/drawable-land-hdpi-screen.png"      density="land-hdpi"
+
 src="www/res/screen/android/drawable-land-xhdpi-screen.png"     density="land-xhdpi"
+
 src="www/res/screen/android/drawable-land-xxhdpi-screen.png"    density="land-xxhdpi"
+
 src="www/res/screen/android/drawable-land-xxxhdpi-screen.png"   density="land-xxxhdpi"
+
 src="www/res/screen/android/drawable-port-ldpi-screen.png"      density="port-ldpi"
+
 src="www/res/screen/android/drawable-port-mdpi-screen.png"      density="port-mdpi"
+
 src="www/res/screen/android/drawable-port-hdpi-screen.png"      density="port-hdpi"
+
 src="www/res/screen/android/drawable-port-xhdpi-screen.png"     density="port-xhdpi"
+
 src="www/res/screen/android/drawable-port-xxhdpi-screen.png"    density="port-xxhdpi"
+
 src="www/res/screen/android/drawable-port-xxxhdpi-screen.png"   density="port-xxxhdpi"
+
 
 http://iconhandbook.co.uk/reference/chart/android/
 
