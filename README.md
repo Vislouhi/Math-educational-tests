@@ -32,6 +32,10 @@
 <p>В интерфейсе должны быть следующие элементы: форма регистрации, форма авторизации, меню (смена пользователя, тесты, настройки) и каталог тестов.</p>
 http://bootstrap-4.ru/docs/4.0/examples/
 <p>В первую очередь создать простые формы для регистрации и авторизации.</p>
+<p>По нажатию кнопки генерировать запрос и получить ответ следующим способом:</p>
+https://github.com/Vislouhi/Math-educational-tests/blob/master/js/htmlRequest.html
+<p>При успешной регистрации или авторизации войти в меню задач, иначе вывести сообщение об ошибке.</p>
+
 
 
 <h2>Регистрация, авторизация, загрузка тестов</h2>
@@ -40,8 +44,11 @@ http://bootstrap-4.ru/docs/4.0/examples/
 <p>Настроить обмен данными между сервером и приложением</p>
 <p>На php создать страницу администрирования базы данных. Должны быть следующие возможности: cоздать пустые таблицы, удалить все имеющиеся таблицы, удалить пользователя, добавить пользователя, удалить текст задачи, добавить текст задачи, добавить пункт меню, удалить пункт меню</p>
 <p>Структура таблиц:</p>
+Tabale1
 <p>|id(int)|Name(string)|Email(string)|Password(string)|empt1|empt2|empt3|empt4|empt5|t1(int)|t2(int)|t3(int)|t4(int)|...t20(int)|</p>
+Table2
 <p>|id(int)|Head(string)|Text1(string)|Text2(string)|Text3(string)|Par1(int)|Par2(int)|Par3(int)|</p>
+Table3
 <p>|Par(int)|Head(string)|picName(string)|</p>
 <p>Par(int) -  если 1 то это каталог, если 2 то задача. 
   Head(string) - название каталога или задачи.
@@ -81,8 +88,13 @@ http://bootstrap-4.ru/docs/4.0/examples/
 <p>Протестировать программу на эмуляторе Nox.</p>
 <p>Подключать к программе обновления и проводить их тестирование, исправлять ошибки.</p>
 <p>Оптимизировать код.</p>
+
+
 https://github.com/phonegap/phonegap-template-hello-world.git
 Отметить галочками Enable debug  и Enable Hydration.
+
+Использовать для сборки следующую конфигурацию.
+https://github.com/Vislouhi/Math-educational-tests/blob/master/config/config.xml
 
 
 <h2>Содержание тестов</h2>
@@ -111,11 +123,47 @@ $v2,1,2,3,...$ мешков с $w2$.Сколко мешков осталось �
 
 <h2>Организатору</h2>
 <p>Создать папку "www"  на studrab. В папке создать подпапки "images" и "code", и файл "index.html".</p>
-<p>Создать файл "requestForms.txt". Получить от разработчиков строки запросов</p>
+<p>Создать файл "requestForms.txt". Получить от разработчиков строки запросов, и занести их в файл.</p>
+
 <h2>Разработчикам php mysql</h2>
+В первую очередь создать следующие файлы: 
+<p>createTable1.php</p>
+<p>deleteTable1.php</p>
+<p>createUser.php?name=ivan&email=ivan@ivan.com&pass=123456&empt1=0&empt2=0&...</p>
+<p>authUser.php?email=ivan@ivan.com&pass=123456</p>
+Передать организатору строки с запросами.
+
 
 
 <h2>Разработчикам интерфейса html5</h2>
+В первую очередь следует создать рабочую форму для регистрации без "наворотов", и отдать файл index.html организатору.
+Должен отправляться запрос и приходить ответ. Ответ вывести через alert('response');
+
+
 <h2>Сборщикам PhoneGap</h2>
+Скомпилировать Hello World
+Внести исправления в config.xml
+Проконтролировать ссылки на изображения. Закомментировать те ссылки для которых нет изображений.
+Получить от организатора состовляющие программы. Произвести тестирование в браузере.
+Скомпилировать в phonegap. Протестировать на эмуляторе.
+
 <h2>Дизайнерам</h2>
+        <icon   src="www/res/icon/android/drawable-ldpi-icon.png"               density="ldpi" />
+        <icon   src="www/res/icon/android/drawable-mdpi-icon.png"               density="mdpi" />
+        <icon   src="www/res/icon/android/drawable-hdpi-icon.png"               density="hdpi" />
+        <icon   src="www/res/icon/android/drawable-xhdpi-icon.png"              density="xhdpi" />
+        <icon   src="www/res/icon/android/drawable-xxhdpi-icon.png"             density="xxhdpi" />
+        <icon   src="www/res/icon/android/drawable-xxxhdpi-icon.png"            density="xxxhdpi" />
+        <splash src="www/res/screen/android/drawable-land-ldpi-screen.png"      density="land-ldpi" />
+        <splash src="www/res/screen/android/drawable-land-mdpi-screen.png"      density="land-mdpi" />
+        <splash src="www/res/screen/android/drawable-land-hdpi-screen.png"      density="land-hdpi" />
+        <splash src="www/res/screen/android/drawable-land-xhdpi-screen.png"     density="land-xhdpi" />
+        <splash src="www/res/screen/android/drawable-land-xxhdpi-screen.png"    density="land-xxhdpi" />
+        <splash src="www/res/screen/android/drawable-land-xxxhdpi-screen.png"   density="land-xxxhdpi" />
+        <splash src="www/res/screen/android/drawable-port-ldpi-screen.png"      density="port-ldpi" />
+        <splash src="www/res/screen/android/drawable-port-mdpi-screen.png"      density="port-mdpi" />
+        <splash src="www/res/screen/android/drawable-port-hdpi-screen.png"      density="port-hdpi" />
+        <splash src="www/res/screen/android/drawable-port-xhdpi-screen.png"     density="port-xhdpi" />
+        <splash src="www/res/screen/android/drawable-port-xxhdpi-screen.png"    density="port-xxhdpi" />
+        <splash src="www/res/screen/android/drawable-port-xxxhdpi-screen.png"   density="port-xxxhdpi" />
 <h2>Организатору</h2>
