@@ -154,7 +154,9 @@ $v2,1,2,3,...$ мешков с $w2$.Сколко мешков осталось �
 
 Создать следующие файлы:
 src="www/res/icon/android/drawable-ldpi-icon.png"               density="ldpi"
+
 src="www/res/icon/android/drawable-mdpi-icon.png"               density="mdpi"
+
 src="www/res/icon/android/drawable-hdpi-icon.png"               density="hdpi"
 src="www/res/icon/android/drawable-xhdpi-icon.png"              density="xhdpi"
 src="www/res/icon/android/drawable-xxhdpi-icon.png"             density="xxhdpi"
