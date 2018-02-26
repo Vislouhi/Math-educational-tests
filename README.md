@@ -118,12 +118,15 @@ $v2,1,2,3,...$ мешков с $w2$.Сколко мешков осталось �
 <p>Создать картинку для экрана загрузки.</p>
 <p>Создать картинку для ярлыка.</p>
 
-<h1>Задание на 28е февраля</h1>
+<h1>Первоочередные задачи на 28е февраля</h1>
 <p>Создать приложение регистрирующее и авторизующее пользователей.</p>
 
 <h2>Организатору</h2>
 <p>Создать папку "www"  на studrab. В папке создать подпапки "images" и "code", и файл "index.html".</p>
-<p>Создать файл "requestForms.txt". Получить от разработчиков строки запросов, и занести их в файл.</p>
+<p>Создать файл "requestForms.txt". Получить от разработчиков php строки запросов, и занести их в файл.</p>
+<p>От дизайнеров получить заготовки файлов с иконками. Разместить их в images.</p>
+<p>От разработчиков интерфейса получить index.html, положить в www.</p>
+
 
 <h2>Разработчикам php mysql</h2>
 В первую очередь создать следующие файлы: 
@@ -148,22 +151,30 @@ $v2,1,2,3,...$ мешков с $w2$.Сколко мешков осталось �
 Скомпилировать в phonegap. Протестировать на эмуляторе.
 
 <h2>Дизайнерам</h2>
-        <icon   src="www/res/icon/android/drawable-ldpi-icon.png"               density="ldpi" />
-        <icon   src="www/res/icon/android/drawable-mdpi-icon.png"               density="mdpi" />
-        <icon   src="www/res/icon/android/drawable-hdpi-icon.png"               density="hdpi" />
-        <icon   src="www/res/icon/android/drawable-xhdpi-icon.png"              density="xhdpi" />
-        <icon   src="www/res/icon/android/drawable-xxhdpi-icon.png"             density="xxhdpi" />
-        <icon   src="www/res/icon/android/drawable-xxxhdpi-icon.png"            density="xxxhdpi" />
-        <splash src="www/res/screen/android/drawable-land-ldpi-screen.png"      density="land-ldpi" />
-        <splash src="www/res/screen/android/drawable-land-mdpi-screen.png"      density="land-mdpi" />
-        <splash src="www/res/screen/android/drawable-land-hdpi-screen.png"      density="land-hdpi" />
-        <splash src="www/res/screen/android/drawable-land-xhdpi-screen.png"     density="land-xhdpi" />
-        <splash src="www/res/screen/android/drawable-land-xxhdpi-screen.png"    density="land-xxhdpi" />
-        <splash src="www/res/screen/android/drawable-land-xxxhdpi-screen.png"   density="land-xxxhdpi" />
-        <splash src="www/res/screen/android/drawable-port-ldpi-screen.png"      density="port-ldpi" />
-        <splash src="www/res/screen/android/drawable-port-mdpi-screen.png"      density="port-mdpi" />
-        <splash src="www/res/screen/android/drawable-port-hdpi-screen.png"      density="port-hdpi" />
-        <splash src="www/res/screen/android/drawable-port-xhdpi-screen.png"     density="port-xhdpi" />
-        <splash src="www/res/screen/android/drawable-port-xxhdpi-screen.png"    density="port-xxhdpi" />
-        <splash src="www/res/screen/android/drawable-port-xxxhdpi-screen.png"   density="port-xxxhdpi" />
-<h2>Организатору</h2>
+
+Создать следующие файлы:
+src="www/res/icon/android/drawable-ldpi-icon.png"               density="ldpi"
+src="www/res/icon/android/drawable-mdpi-icon.png"               density="mdpi"
+src="www/res/icon/android/drawable-hdpi-icon.png"               density="hdpi"
+src="www/res/icon/android/drawable-xhdpi-icon.png"              density="xhdpi"
+src="www/res/icon/android/drawable-xxhdpi-icon.png"             density="xxhdpi"
+src="www/res/icon/android/drawable-xxxhdpi-icon.png"            density="xxxhdpi"
+src="www/res/screen/android/drawable-land-ldpi-screen.png"      density="land-ldpi"
+src="www/res/screen/android/drawable-land-mdpi-screen.png"      density="land-mdpi"
+src="www/res/screen/android/drawable-land-hdpi-screen.png"      density="land-hdpi"
+src="www/res/screen/android/drawable-land-xhdpi-screen.png"     density="land-xhdpi"
+src="www/res/screen/android/drawable-land-xxhdpi-screen.png"    density="land-xxhdpi"
+src="www/res/screen/android/drawable-land-xxxhdpi-screen.png"   density="land-xxxhdpi"
+src="www/res/screen/android/drawable-port-ldpi-screen.png"      density="port-ldpi"
+src="www/res/screen/android/drawable-port-mdpi-screen.png"      density="port-mdpi"
+src="www/res/screen/android/drawable-port-hdpi-screen.png"      density="port-hdpi"
+src="www/res/screen/android/drawable-port-xhdpi-screen.png"     density="port-xhdpi"
+src="www/res/screen/android/drawable-port-xxhdpi-screen.png"    density="port-xxhdpi"
+src="www/res/screen/android/drawable-port-xxxhdpi-screen.png"   density="port-xxxhdpi"
+
+http://iconhandbook.co.uk/reference/chart/android/
+
+Отдать эти файлы организатору.
+Продолжать художественную работу.
+
+
