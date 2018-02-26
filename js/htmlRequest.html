@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JavaScript - read JSON from URL</title>
+   
+</head>
+
+<body>
+<div class="mypanel"></div>
+
+<script>
+
+
+
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+
+      if (this.readyState == 4 && this.status == 200) {
+         var myObj = JSON.parse(this.responseText);
+          document.writeln("<p>"+myObj.status+"</p>");
+		      document.writeln("<p>"+myObj.email+"</p>");
+		      document.writeln("<p>"+myObj.pass+"</p>");
+     }
+  };
+
+  xmlhttp.open("GET", "http://vislouhi.000webhostapp.com/test.php?email=ivan@ivan.com&pass=12345", true);
+
+  xmlhttp.send();
+
+
+
+ 
+
+ 
+</script>
+    
+</body>
+</html>
