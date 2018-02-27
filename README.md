@@ -107,6 +107,9 @@ https://github.com/Vislouhi/Math-educational-tests/blob/master/config/config.xml
 $v2,1,2,3,...$ мешков с $w2$.Сколко мешков осталось в $w1$?</p>
 <p>Пример строки для генерации вариантов ответов:</p>
 <p>D1=v1+v2,D2=v1-v3.</p>
+Пример обработки строки для задачи:
+https://github.com/Vislouhi/Math-educational-tests/blob/master/js/randomTasks.html
+
 
 <h2>Кэширование данных</h2>
 <p>Записать файл в кэш.</p>
