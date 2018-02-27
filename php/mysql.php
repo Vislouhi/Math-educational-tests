@@ -5,9 +5,9 @@ $pass = $_GET['pass'];
 
 
 $servername = "localhost";
-$username = "id4878180_vislouhi";
-$password = "123123";
-$database = "id4878180_requester";
+$username = "id****";
+$password = "pass";
+$database = "id48****";
 
 
     
