@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>HTML5 : Hello World Example</title>
+    </head>
+    <body>
+       <script>
+	
+
+          function getRandomInt(min, max) {
+              return Math.floor(Math.random() * (max - min)) + min;
+          }
+          var str ="There was |5#$w1,kot,kit,kolokol,pricep,tigr,stol$| on the floor. How much |0#$w1,kot,kit,kolokol,pricep,tigr,stol$| was there?";
+          var strOut = "";
+         
+          var w1ri=0;
+          str.split('$').forEach(function callback(currentValue, index, array) {
+            
+          if (index&1){
+          
+            currentValue.split(',').forEach(function callback(currentValue, index, array) {
+            if (currentValue.localeCompare("w1") == 0) { 
+                if (w1ri==0){
+                  w1ri=getRandomInt(1, array.length);
+                  strOut+=array[w1ri];
+                }else{
+                  strOut+=array[w1ri];
+                }
+            }
+            });
+         }else{
+            strOut+=currentValue;
+         }
+        });
+        document.writeln("<p>"+strOut+"</p>");
+	
+
+
+
+      str=strOut;
+      strOut="";
+      var val;          
+	    str.split('|').forEach(function callback(currentValue, index, array) {
+            
+      if (index&1){
+          currentValue.split('#').forEach(function callback(currentValue, index, array) {
+          if (index==0)
+          {
+              val=parseInt(currentValue);
+              if (val!=0){
+                  strOut+=currentValue+" ";
+              }
+           }
+           if (index==1){
+              if ((val==5)||(val==0)){
+
+                  strOut+=currentValue+"ov";
+
+
+              }
+
+          if (val==2){
+
+                  strOut+=currentValue+"a";
+
+
+          }
+
+        }
+
+
+        });
+
+       }else {strOut+=currentValue+" ";}
+
+		});
+
+    document.writeln(strOut);
+
+	</script>
+
+    </body>
+</html>
