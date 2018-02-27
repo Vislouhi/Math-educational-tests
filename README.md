@@ -44,7 +44,9 @@ https://github.com/Vislouhi/Math-educational-tests/blob/master/js/htmlRequest.ht
 <p>Настроить обмен данными между сервером и приложением</p>
 <p>На php создать страницу администрирования базы данных. Должны быть следующие возможности: cоздать пустые таблицы, удалить все имеющиеся таблицы, удалить пользователя, добавить пользователя, удалить текст задачи, добавить текст задачи, добавить пункт меню, удалить пункт меню</p>
 
-https://www.000webhost.com/forum/t/how-to-connect-to-database-using-php/42093
+пример подключения к базеданных:
+
+https://github.com/Vislouhi/Math-educational-tests/blob/master/php/mysql.php
 
 <p>Структура таблиц:</p>
 Tabale1
