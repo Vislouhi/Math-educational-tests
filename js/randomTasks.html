@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>HTML5 : Hello World Example</title>
+    </head>
+    <body>
+       <script>
+
+          function getRandomInt(min, max) {
+              return Math.floor(Math.random() * (max - min)) + min;
+          }
+
+
+          var str ="There was 10 $w1,cats,dogs,elephants,lambs,cows,lions,pigs$ on the floor. How much $w1,cats,dogs,elephants,lambs,cows,lions,pigs$ was there?";
+          var strOut = "";
+          var arr=str.split('$');
+          var w1ri=0;
+
+
+          arr.forEach(function callback(currentValue, index, array) {
+            
+
+          if (index&1){
+          
+            currentValue.split(',').forEach(function callback(currentValue, index, array) {
+
+            if (currentValue.localeCompare("w1") == 0) { 
+
+
+                if (w1ri==0){
+
+                  w1ri=getRandomInt(1, array.length);
+                  strOut+=array[w1ri];
+
+
+                }else{
+
+                  strOut+=array[w1ri];
+
+
+                }
+
+            }
+
+            });
+
+         }else{
+
+            strOut+=currentValue;
+
+
+         }
+
+        });
+        document.writeln("<p>"+strOut+"</p>");
+
+	</script>
+
+    </body>
+</html>
