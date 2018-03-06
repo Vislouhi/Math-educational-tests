@@ -61,23 +61,44 @@ Table3
 
 <p>Создать php файлы обрабатывающие следующие запросы:</p>
 <p>authUser.php?email=ivan@ivan.com&pass=123456</p>
-<p>Вывод в виде строки: 1(успешная авторизация)|id|Name|Email|empt1|empt2|empt3|empt4|empt5|t1(int)|t2(int)|t3(int)|t4(int)|...t20(int)|</p>
+<p>Вывод в формате json:
+  {{"status":"ok"},{"errCode":"0"},{"id":"123"},{"Name":"Ivan"},{"Email":"ivan@ivanov"},{"empt1":"0"}.....}.
+  
+  |id|Name|Email|empt1|empt2|empt3|empt4|empt5|t1(int)|t2(int)|t3(int)|t4(int)|...t20(int)|</p>
 <p>createUser.php?name=ivan&email=ivan@ivan.com&pass=123456&empt1=0&empt2=0&...</p>
-<p>Вывод в виде строки:1(успешная регистрация).</p>
+
+Вывод в формате json:
+  {{"status":"ok"},{"errCode":"0"}}.
 <p>deleteUser.php?email=ivan@ivan.com</p>
-<p>Вывод в виде строки:1(успешное удаление).</p>
+<p>Вывод в формате json:
+  {{"status":"ok"},{"errCode":"0"}}.<p>
 <p>changeUserPar.php?parName=t4&val=25</p>
-<p>Вывод в виде строки:1(успешное изменение).</p>
-<p>listUser.php</p>
-<p>Вывод в виде строки:n(кол-во пользователей)|email1|email2|...|.</p>
+<p>Вывод в формате json:
+  {{"status":"ok"},{"errCode":"0"}}.<p>
+<p>changeUserPar.php?parName=t4&val=25</p>
+
+<p>Вывод в формате json:
+  {{"status":"ok"},{"errCode":"0"}}.<p>
+
+
 <p>listTask.php</p>
-<p>Вывод в виде строки:n(кол-во пользователей)|par1|head1|...|.</p>
-<p>cretateTask.php?Head=Задача1|Text1=У васи было ...</p>
-<p>readTask.php?Head=Задача1</p>
-<p>Вывод в виде строки:1(успешное чтение)|id|Head|Text1|Text2|Text3|Par1|Par2|Par3|.</p>
+<p>Вывод в формате json:
+  {{"title":"Цифры",{"head":"Палочки -> цифры"},{"head":"Цифры->палочки"}...},}.<p>
+
+<p>addTask.php</p>
+<p> Методом POST передать строку формата json  {{"title":"Цифры",{"head":"Палочки -> цифры"},{"head":"Цифры->палочки"}...},}</p>
+
+<p>cretateTask.php?Head=Задача1&Text1=У васи было ...</p>
+<p>Вывод в формате json:
+  {{"status":"ok"},{"errCode":"0"}}.<p>
+
 <p>deleteTask.php?head=Цифры</p>
+<p>Вывод в формате json:
+  {{"status":"ok"},{"errCode":"0"}}.<p>
 <p>addTaskTree.php?par=2&head=Цифры&head1=Новая задача</p>
-<p>addTaskTree.php?par=1&head=Новый заголовок</p>
+<p>Вывод в формате json:
+  {{"status":"ok"},{"errCode":"0"}}.<p>
+
 <p>createTable1.php</p>
 <p>createTable2.php</p>
 <p>createTable3.php</p>
@@ -101,6 +122,11 @@ https://github.com/phonegap/phonegap-template-hello-world.git
 Использовать для сборки следующую конфигурацию.
 https://github.com/Vislouhi/Math-educational-tests/blob/master/config/config.xml
 
+Попробовать связку мобильного приложения Phonegap и соответствующего приложения на PC.
+
+Сначала нужно из эмулятара android успешно пропиногвать PC.
+
+Установить на эмулятор и PC приложение phonegap. Запустить приложение "HelloHell" :))
 
 <h2>Содержание тестов</h2>
 <p>Создание строк для генерации рандомных тестов.</p>
@@ -137,9 +163,9 @@ https://github.com/Vislouhi/Math-educational-tests/blob/master/js/Sklonenie.html
 
 
 <h2>Кэширование данных</h2>
-<p>Записать файл в кэш.</p>
-<p>Записать файл в данные приложения.</p>
-<p>Организовать хранение данных на локальном носителе.</p>
+<p>Воспользоваться mysql для phonegap, чтобы хранить данные. Строки запросов будут такими же как и в кодах для серверной части программы</p>
+<p>Скомпилировать пример http://docs.phonegap.com/en/2.0.0/cordova_storage_storage.md.html</p>
+<p>Взять строки запросов для mysql у разработчиков php. Обеспечить их работу в локальной базе данных. Создать события: база данных загружена, база данных сохранена.</p>
 
 <h2>Графика</h2>
 <p>Для каждого пункта меню сделать поясняющую картинку.</p>
