@@ -122,11 +122,7 @@ https://github.com/phonegap/phonegap-template-hello-world.git
 Использовать для сборки следующую конфигурацию.
 https://github.com/Vislouhi/Math-educational-tests/blob/master/config/config.xml
 
-Попробовать связку мобильного приложения Phonegap и соответствующего приложения на PC.
 
-Сначала нужно из эмулятара android успешно пропиногвать PC.
-
-Установить на эмулятор и PC приложение phonegap. Запустить приложение "HelloHell" :))
 
 <h2>Содержание тестов</h2>
 <p>Создание строк для генерации рандомных тестов.</p>
