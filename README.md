@@ -117,6 +117,10 @@ https://github.com/Vislouhi/Math-educational-tests/blob/master/js/htmlRequest.ht
 
 <p>readTask.php?Head=Задача1</p>
 
+<p>authUser.php?email=ivan@ivan.com&pass=123456</p>
+
+
+
 
 
 <p>Создать механизм регистрации используя mysql и php.</p>
