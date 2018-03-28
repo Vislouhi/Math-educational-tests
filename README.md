@@ -1,3 +1,12 @@
+<h1 align="center">Новый хостинг.</h1>
+
+
+pspueducationserver@gmail.com
+
+pspu12312
+
+
+
 <h1 align="center">Обучающие тесты по математике. Мобильное приложение.</h1>
 
 <h2>Статья и презентация</h2>
