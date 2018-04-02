@@ -36,6 +36,10 @@ https://vislouhi.000webhostapp.com/createTask.php?Head=1&Text1=У Васи бы�
 
 https://vislouhi.000webhostapp.com/readTask.php
 
+Выполняются запросы через javascript:
+
+https://github.com/Vislouhi/Math-educational-tests/blob/master/js/htmlRequest.html
+
 
 <h1 align="center">Новый хостинг.</h1>
 
