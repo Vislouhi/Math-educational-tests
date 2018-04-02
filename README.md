@@ -1,3 +1,28 @@
+<h1 align="center">Запросы серверу.</h1>
+
+Работают следующие запросы:
+
+Создать таблицы
+
+https://vislouhi.000webhostapp.com/createTable1.php
+
+https://vislouhi.000webhostapp.com/createTable2.php
+
+Удалить таблицы
+
+https://vislouhi.000webhostapp.com/deleteTable1.php
+
+https://vislouhi.000webhostapp.com/deleteTable2.php
+
+https://vislouhi.000webhostapp.com/createUser.php?email=ok@ok.com&pass=123456
+
+https://vislouhi.000webhostapp.com/authUser.php?email=ok@ok.com&pass=123456
+
+https://vislouhi.000webhostapp.com/createTask.php?Head=1&Text1=У Васи было 5 яблок&Text2=D1=V1plusV2
+
+https://vislouhi.000webhostapp.com/readTask.php
+
+
 <h1 align="center">Новый хостинг.</h1>
 
 
