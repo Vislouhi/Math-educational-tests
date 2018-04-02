@@ -40,6 +40,12 @@ https://vislouhi.000webhostapp.com/readTask.php
 
 https://github.com/Vislouhi/Math-educational-tests/blob/master/js/htmlRequest.html
 
+<h1 align="center">Импорт html файлов. Рабочий пример.</h1>
+
+https://github.com/Vislouhi/Math-educational-tests/blob/master/js/import.html
+
+https://github.com/Vislouhi/Math-educational-tests/blob/master/js/intro.html
+
 
 <h1 align="center">Новый хостинг.</h1>
 
