@@ -30,7 +30,7 @@ errCode=2 - неверный пароль.
 
 Записать задание на сервер:
 
-https://vislouhi.000webhostapp.com/createTask.php?Head=1&Text1=У Васи было 5 яблок&Text2=D1=V1plusV2
+https://vislouhi.000webhostapp.com/createTask.php?Head=1&Text1=У Васи было 5 яблок&Text2=D1=V1pV2
 
 Считать все задания с сервера:
 
