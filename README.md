@@ -14,11 +14,25 @@ https://vislouhi.000webhostapp.com/deleteTable1.php
 
 https://vislouhi.000webhostapp.com/deleteTable2.php
 
+Создать пользователя:
+
 https://vislouhi.000webhostapp.com/createUser.php?email=ok@ok.com&pass=123456
+
+errCode=1 - такой пользователь уже есть.
+
+Авторизовать пользователя:
 
 https://vislouhi.000webhostapp.com/authUser.php?email=ok@ok.com&pass=123456
 
+errCode=1 - нет такого пользователя.
+
+errCode=2 - неверный пароль.
+
+Записать задание на сервер:
+
 https://vislouhi.000webhostapp.com/createTask.php?Head=1&Text1=У Васи было 5 яблок&Text2=D1=V1plusV2
+
+Считать все задания с сервера:
 
 https://vislouhi.000webhostapp.com/readTask.php
 
