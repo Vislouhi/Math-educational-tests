@@ -44,7 +44,7 @@ https://github.com/Vislouhi/Math-educational-tests/blob/master/js/htmlRequest.ht
 
 https://github.com/Vislouhi/Math-educational-tests/blob/master/js/import.html
 
-https://github.com/Vislouhi/Math-educational-tests/blob/master/js/intro.html
+https://github.com/Vislouhi/Math-educational-tests/blob/master/js/intro.php
 
 
 <h1 align="center">Новый хостинг.</h1>
