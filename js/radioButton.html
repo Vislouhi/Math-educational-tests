@@ -1,0 +1,31 @@
+<form>
+  <input id="rb11" name="answerBox1" type="radio"  value="male" checked><label id="Lrb11">12</label> </input>
+  <br>
+  <input id="rb12" name="answerBox1" type="radio"  value="female"> <label id="Lrb12">12</label></input>
+    <br>
+  <input id="rb13" name="answerBox1" type="radio"  value="other"> <label id="Lrb13">12</label></input>
+    <br>
+  <input id="rb14" name="answerBox1" type="radio"  value="other"><label id="Lrb14">12</label> </input>
+</form>
+<button id="check">
+Проверка
+
+</button>
+<script>
+var checkButton =document.getElementById('check');
+checkButton.addEventListener("click", function(){
+    var radios = document.getElementsByName('answerBox1');
+
+for ( var i = 0; i < radios.length; i++) {
+    if(radios[i].checked) {
+	
+	document.getElementById('L'+radios[i].id).innerHTML+=' - Верно.';
+	
+      
+        break;
+    }
+}
+	
+	
+});
+</script>
