@@ -9,6 +9,7 @@ https://github.com/Vislouhi/Math-educational-tests/blob/master/js/spisokOtvetov.
 var T1 = [
 
 "Текст задачи 1",
+
 "Текст задачи 2",
 
 "Текст задачи 3",
