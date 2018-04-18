@@ -1,0 +1,147 @@
+<link rel="stylesheet" href="zadacha.css">
+
+<div id="taskText">
+
+</div>
+
+
+<form>
+  <input id="rb11" name="answerBox1" type="radio"  value="a1" checked><label id="Lrb11"></label> </input>
+  <br>
+  <input id="rb12" name="answerBox1" type="radio"  value="a2"> <label id="Lrb12"></label></input>
+    <br>
+  <input id="rb13" name="answerBox1" type="radio"  value="a3"> <label id="Lrb13"></label></input>
+    <br>
+  <input id="rb14" name="answerBox1" type="radio"  value="a4"><label id="Lrb14"></label> </input>
+</form>
+
+<button id="check">
+Проверка
+</button>
+
+<button id="next">
+Далее
+</button>
+
+<script src="tasks.js"></script>
+
+<script src="answer.js"></script>
+
+<script>
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+//Функция преобразования кодовой строки задачи в текст задачи
+function compileTaskString(taskString)
+{
+  return taskString;
+}
+
+//Функция преобразования кодовой строки ответа задачи в текст ответа задачи
+function compileAnswerString(answerString)
+{
+  return answerString;
+}
+
+//Выбор номера задачи случайным образом
+var randomTaskNumber = getRandomInt(0, T1.length);
+
+//Элемент содержащий текст задачи
+var taskText = document.getElementById('taskText');
+taskText.innerHTML = compileTaskString(T1[randomTaskNumber]); 
+
+//Правильный ответ и его позиция задаются случайным образом
+var trueAnswer=compileAnswerString(O1[randomTaskNumber]);
+var trueAnswerPosition=getRandomInt(0, 4);
+//Массив элементов для первого блока ответов
+//Массив ответов заполняется пустышками
+var answers1 = ["e","e","e","e"];
+
+
+//Кнопка "Проверка"
+var checkButton = document.getElementById('check');
+//Кнопка "Далее"
+var nextButton = document.getElementById('next');
+//Массив элементов с вариантами ответов
+var radios = document.getElementsByName('answerBox1');
+//Заполнение массива элементов с вариантами ответов
+makeAnswers(trueAnswer,trueAnswerPosition,5,15,3,8,10,20); 
+
+//Функция заполняет форму со списком ответов
+//true_Answer - правильный ответ
+//true_AnswerPosition - позиция правильного ответа
+//Вид ответа a1+a2=a3
+//[min1,max1] - диапазон значений a1
+function makeAnswers(true_Answer,true_AnswerPosition,min1,max1,min2,max2,min3,max3)
+{
+  //Массив ответов заполняется пустышками
+  answers1 = ["e","e","e","e"];
+  for ( var i = 0; i < 4; i++) {
+    //Выбор не занятой позиции для неправильного ответа случайным образом
+    do{
+      var randomPosition = getRandomInt(0, 4);
+    }while(answers1[randomPosition].charAt(0)!="e");
+  
+    //Генерация случайного ответа
+    answers1[randomPosition]=getRandomInt(min1, max1)+"+"+getRandomInt(min2, max2)+"="+getRandomInt(min3, max3);
+  }
+  //Запись правильного ответа
+  answers1[true_AnswerPosition]=true_Answer;
+  //Цикл по всем элементам массива и запись в них списка ответов
+  for ( var i = 0; i < radios.length; i++) {
+    document.getElementById('L'+radios[i].id).innerHTML=answers1[i];
+  }
+}
+
+//Функция, которая выполняется при нажатии кнопки "Проверка"
+var checkFunc = function(){
+	//Удаление прослушивателей нажатий на кнопку "Проверка"
+	checkButton.removeEventListener("click", checkFunc);
+	checkButton.removeEventListener("touchstart", checkFunc);
+	//Назначение прослушивателей нажатий на кнопку "Далее"
+	nextButton.addEventListener("click", nextFunc);
+    nextButton.addEventListener("touchstart", nextFunc);
+    //Перебор всех элементов с ответами
+	for ( var i = 0; i < radios.length; i++) {
+      //Выбор отмеченного элемента
+	  if(radios[i].checked) {
+		//Добавление пометки к выбранному ответу
+		if (i==trueAnswerPosition){
+	      document.getElementById('L'+radios[i].id).innerHTML+=' - Верно.';
+		}else{
+		 document.getElementById('L'+radios[trueAnswerPosition].id).innerHTML+=' - Верно.';
+		 document.getElementById('L'+radios[i].id).innerHTML+=' - Неверно.';
+		}
+		break;
+		
+      }
+   }
+  }
+  
+//Функция, которая выполняется при нажатии кнопки "Проверка"  
+var nextFunc = function(){
+    randomTaskNumber = getRandomInt(0, T1.length);
+	//Запись нового текста задачи, выбранного слкчайным образом
+	taskText.innerHTML = compileTaskString(T1[randomTaskNumber]);
+	//Запись нового правильного ответа
+	trueAnswer=compileAnswerString(O1[randomTaskNumber]);
+	//Генерация новой позиции
+    trueAnswerPosition=getRandomInt(0, 4);
+	//Запись новых отвтетов в форму
+	makeAnswers(trueAnswer,trueAnswerPosition,5,15,3,8,10,20); 
+	
+	//Удаление прослушивателей нажатий на кнопку "Далее"
+	nextButton.removeEventListener("click", nextFunc);
+	nextButton.removeEventListener("touchstart", nextFunc);
+	//Создание прослушивателей нажатия кнопки "Проверка"
+    checkButton.addEventListener("click", checkFunc);
+    checkButton.addEventListener("touchstart", checkFunc);
+	
+	
+	
+}
+//Создание прослушивателей нажатия кнопки "Проверка"
+checkButton.addEventListener("click", checkFunc);
+checkButton.addEventListener("touchstart", checkFunc);
+</script>
