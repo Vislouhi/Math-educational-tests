@@ -1,131 +1,36 @@
 
 <h1 align="center">Первоочередные задачи на 18е апреля.</h1>
 
-Доаботка следующих кодов:
 
-1.
+1. Форма с текстом задачи и вариантами ответов.
+Создать на базе примера еще два файла для задач в два и три действия. 
 
-Пример формы списка ответов
+https://github.com/Vislouhi/Math-educational-tests/blob/master/js/zadacha.html
 
-https://github.com/Vislouhi/Math-educational-tests/blob/master/js/spisokOtvetov.html
+2. Создать файл CSS для формы с текстом задач и ответами.
 
-0. Сделать три файла такого типа для каждого типа задач.
+https://github.com/Vislouhi/Math-educational-tests/blob/master/css/zadacha.css
 
-1. Сделать в нем оформление.
+https://github.com/Vislouhi/Math-educational-tests/blob/master/js/zadacha.html
 
-2.Вставить в него алгоритм формулировки задач.
+3. Создать файл js , содержащий кодовые строки для задач.
 
-3. Создать файл tasks.js со следующим текстом:
+https://github.com/Vislouhi/Math-educational-tests/blob/master/js/tasks.js
 
-//Задачи в одно действие
+4. Создать файл js , содержащий кодовые строки для ответов.
 
-var T1 = [
+https://github.com/Vislouhi/Math-educational-tests/blob/master/js/answer.js
 
-"Текст задачи 1",
+5. Протестировать работу следующих кодов на эмуляторе.
 
-"Текст задачи 2",
+https://github.com/Vislouhi/Math-educational-tests/blob/master/js/zadacha.html
 
-"Текст задачи 3",
+https://github.com/Vislouhi/Math-educational-tests/blob/master/css/zadacha.css
 
-.
+https://github.com/Vislouhi/Math-educational-tests/blob/master/js/tasks.js
 
-.
+https://github.com/Vislouhi/Math-educational-tests/blob/master/js/answer.js
 
-.
-
-];
-
-//Задачи в два действия
-
-var T2 = [
-
-"Текст задачи 1",
-
-"Текст задачи 2",
-
-"Текст задачи 3",
-
-.
-
-.
-
-.
-
-];
-
-//Задачи в три действия
-
-var T3 = [
-
-"Текст задачи 1",
-
-"Текст задачи 2",
-
-"Текст задачи 3",
-
-.
-
-.
-
-.
-
-];
-
-4. Создать файл answer.js со следующим текстом:
-
-//Задачи в одно действие
-
-var O1 = [
-
-"Ответы задачи 1",
-
-"Ответы задачи 2",
-
-"Ответы задачи 3",
-
-.
-
-.
-
-.
-
-];
-
-//Задачи в два действия
-
-var O2 = [
-
-"Ответы задачи 1",
-
-"Ответы задачи 2",
-
-"Ответы задачи 3",
-
-.
-
-.
-
-.
-
-];
-
-//Задачи в три действия
-
-var O3 = [
-
-"Ответы задачи 1",
-
-"Ответы задачи 2",
-
-"Ответы задачи 3",
-
-.
-
-.
-
-.
-
-];
 
 5. Написать алгоритм загрузки текстов задачь на сервер.
 
