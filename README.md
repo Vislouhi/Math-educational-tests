@@ -31,8 +31,11 @@ https://github.com/Vislouhi/Math-educational-tests/blob/master/js/tasks.js
 
 https://github.com/Vislouhi/Math-educational-tests/blob/master/js/answer.js
 
+6. Наполнить содержимым функции генерации текстов задач и ответов для задач в следующем файле:
 
-5. Написать алгоритм загрузки текстов задачь на сервер.
+https://github.com/Vislouhi/Math-educational-tests/blob/master/js/zadacha.html
+
+7. Написать алгоритм загрузки текстов задачь на сервер.
 
 
 
