@@ -1,0 +1,161 @@
+index.html можно значительно ускорить, если вытащить из него лишнюю обработку.
+index:
+<!DOCTYPE html>
+
+<html>
+    <head>
+		
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+		<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+		<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+		
+		<script src="jquery-2.2.4.js"></script>
+		<script src="jquery.mobile-1.4.5.min.js"></script>
+        
+		
+		<title>Hello World</title>
+    </head>
+    <body>
+ 
+
+			
+			<div data-role="content" data-theme="b" id="m1" >
+
+
+			
+			
+			<h1 align="center">Цифры</h1>
+
+<img class="fig" src="images/m1.png" />
+
+</div>
+&nbsp;
+
+<div data-role="content" data-theme="b" id="m2" >
+
+<h1 align="center">Больше на</h1>
+
+<img class="fig" src="images/m2.png" />
+
+</div>
+&nbsp;
+
+<div data-role="content" data-theme="b" id="m3" >
+
+<h1 align="center">Миллиметры в сантиметры</h1>
+
+<img class="fig" src="images/m3.png" />
+
+</div>
+
+&nbsp;
+
+<div data-role="content" data-theme="b" id="m4" >
+
+<h1 align="center">Сантиметры в миллиметры</h1>
+
+<img class="fig" src="images/m4.png" />
+
+</div>
+
+&nbsp;
+
+<div data-role="content" data-theme="b" id="m2" >
+
+<h1 align="center">Больше на</h1>
+
+<img class="fig" src="images/m2.png" />
+
+</div>
+
+&nbsp;
+
+<div data-role="content" data-theme="b" id="m2" >
+
+<h1 align="center">Больше на</h1>
+
+<img class="fig" src="images/m2.png" />
+
+</div>
+<script>
+	//$(".item").width('50%');
+	//$(".item").text-align('center');
+	//document.getElementById('item').style.width="50%";
+	
+	$( "#m1" ).click(function() {
+  document.location.href = "jquaerytest.html";
+});
+
+$( "#m2" ).click(function() {
+  document.location = "m2.html?0&0";
+});
+
+$( "#m3" ).click(function() {
+  document.location = "m3.html?0&0";
+});
+
+$( "#m4" ).click(function() {
+  document.location = "m4.html?0&0";
+});
+</script>
+			
+    </body>
+</html>
+
+
+
+
+
+Но Надо будет создать папку css и поместить туда файл style.css. Добавил условие на уменьшение img, на мониторе pc смотрется получше.
+style.css:
+.fig {
+	 display: block;
+  margin: 0 auto;
+    width: 40%;
+  }
+  
+.item {
+  position: relative;
+	width:50%;
+	left:25%;
+}
+	
+.blok {
+position:relative;
+width:50%;
+	left:25%;
+padding:1em;
+margin:2em 10px 4em;
+background:#fff;
+-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+-webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.blok:before,
+.blok:after {
+content:"";
+position:absolute;
+z-index:-2;
+}
+
+.blok p {
+font-size:16px;
+font-weight:bold;
+}
+
+@media only screen and (max-width: 768px) {
+	.fig {
+	display: block;
+  margin: 0 auto;
+    width: 80%;
+  }
+}
